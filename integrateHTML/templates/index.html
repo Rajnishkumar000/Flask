@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our School Website</title>
+    <!-- uklfor is used to create dynamic url -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='mycss/style.css')}}">
+    <script type="text/javascript" src="{{ url_for('static',filename='javascript/script.js')}}">
+       
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our School</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#academics">Academics</a>
+        <a href="#admissions">Admissions</a>
+        <a href="#faculty">Faculty & Staff</a>
+        <a href="#events">Events</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#news">News</a>
+        <a href="#alumni">Alumni</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="home">
+        <div class="container">
+            <h2>Home</h2>
+            <p>Welcome to our school website! Explore our programs, facilities, and more.</p>
+            <button class="button">Learn More</button>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Learn more about our school and its history.</p>
+        </div>
+    </section>
+    <section id="academics">
+        <div class="container">
+            <h2>Academics</h2>
+            <p>Discover our academic programs and curriculum.</p>
+        </div>
+    </section>
+    <section id="admissions">
+        <div class="container">
+            <h2>Admissions</h2>
+            <p>Find information about admissions procedures and requirements.</p>
+            <form action="/submit" method='post'>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
+    <section id="faculty">
+        <div class="container">
+            <h2>Faculty & Staff</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="teacher1.jpg" alt="Teacher 1">
+                    <h3>John Doe</h3>
+                    <p>Mathematics</p>
+                </div>
+                <div class="grid-item">
+                    <img src="teacher2.jpg" alt="Teacher 2">
+                    <h3>Jane Smith</h3>
+                    <p>Science</p>
+                </div>
+                <!-- Add more faculty/staff members as needed -->
+            </div>
+        </div>
+    </section>
+    <!-- Add more sections (e.g., events, gallery, news, alumni) with appropriate content and styling -->
+    <footer>
+        &copy; 2024 Our School. All rights reserved.
+    </footer>
+</body>
+</html>
